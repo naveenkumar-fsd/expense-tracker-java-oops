@@ -122,6 +122,29 @@ This project helped me practice:
 
 ---
 
+## 🗺️ Roadmap (Upcoming Improvements)
+
+### 🔹 Phase 1 (In Progress)
+- Improve validations
+- More clean console UI
+- Code documentation with JavaDoc
+
+### 🔹 Phase 2
+- Add file-based storage (CSV/JSON)
+- Export monthly report to file
+- Add category statistics (min, max, average)
+
+### 🔹 Phase 3
+- Add login/authentication
+- Convert to GUI using Swing/JavaFX
+- Convert this into a full Spring Boot web application
+
+### 🔹 Phase 4
+- Graphical expense charts
+- Database support (MySQL / SQLite)
+- REST API version
+
+
 ## 🤝 Contribution
 Feel free to fork and improve the project!
 
