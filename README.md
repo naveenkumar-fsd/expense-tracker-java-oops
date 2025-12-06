@@ -1,235 +1,225 @@
-💰 Expense Tracker + Wallet System (Java OOPS Project)
+# Expense Tracker (Java OOPS Project)
 
 A complete Expense Tracker Application built using Core Java with a fully functional Wallet Balance System, allowing users to track expenses, update/delete entries, and maintain real-time balance like a mini-GPay wallet.
 This project strictly follows Object-Oriented Programming (OOPS) principles and is structured, modular, and interview-ready.
+---
 
-📌 Why Not Google Notes / Excel?
+## 📌 Why Not Google Notes / Excel?
 
-Many people use Notes or Excel for expense tracking, but they have major limitations:
+Most people track expenses in **Google Notes** or **Excel**, but they face limitations:
 
-❌ Problems with Excel / Notes
+### ❌ Excel / Notes Problems
+- No automatic validations (wrong data entries)
+- No structure or categorization
+- No delete/update history
+- No summary reports
+- No real-time calculation logic
+- Manual work every time
+- Hard to maintain long-term data
 
-No automatic balance deduction
+### ✔ Our Expense Tracker Advantages
+- Programmatic validation (invalid amount/date prevented)
+- Clean OOPS structure (Scalable for future features)
+- Add, update, delete operations
+- Automatic category & date handling
+- Monthly summary report
+- Stored in program memory for fast access
+- Fully Java-based — no manual work
 
-No validations (wrong amount/date gets added)
+---
 
-No update/delete tracking
+## 🛠 Technologies Used
+- **Java 8+**
+- **OOPS concepts**
+  - Encapsulation
+  - Abstraction
+  - Inheritance
+  - Polymorphism
+- **Collections (List, Map)**
+- **LocalDate API**
+- **Scanner input (CLI Application)**
 
-No monthly summary
 
-No password protection
+---
 
-Manual calculation every time
+## 🚀 Features Implemented
 
-Not scalable or structured
+###💵 Wallet Balance System (NEW)
 
-✔ Advantages of This Java Expense Tracker
+- Your project now works like a mini-wallet app.
 
-Wallet system manages balance automatically
+- Start with initial balance (e.g., ₹40,000)
 
-Add, update, delete operations
+- When you add an expense → balance reduces
 
-Real-time balance like GPay
+- When you delete an expense → amount added back
 
-Monthly total report
+- When you update an expense → balance auto-adjusts
 
-Password-protected
+- Always shows remaining balance
 
-No wrong inputs (strong validation)
+- This is the biggest NEW feature added to your project.
 
-100% OOPS-based clean backend
+###🔐 Password Protection
 
-Easy to expand for future features
+- Before accessing the app, user must enter a valid password.
 
-🛠 Technologies Used
+- Prevents unauthorized access.
 
-Java 8+
+### ✔ Add Expense  
+Allows users to add an expense with:
+- Amount  
+- Description  
+- Category  
+- Date (LocalDate)
 
-OOPS Concepts
+### ✔ Update Expense  
+Modify existing expense details.
 
-Encapsulation
+### ✔ Delete Expense  
+Remove an expense using ID.
 
-Abstraction
+### ✔ View All Expenses  
+Displays all expenses in a clean, readable format.
 
-Polymorphism
+### ✔ Monthly Summary Report  
+Generates:
+- Total expenses of the month  
+- Count of entries  
+- Category-wise expense breakdown  
 
-Modularity
+### ✔ Validations Added
+- Negative/zero amount check  
+- Empty description check  
+- Invalid date check  
+- Category validation  
 
-Collections (ArrayList)
+---
 
-LocalDate API
+## 🔥 What I Have Used (OOPS Breakdown)
 
-Scanner (CLI Program)
+### **Encapsulation**  
+All expense fields are private with getters/setters.
 
-🚀 Features Implemented (Updated)
-💵 1. Wallet Balance System (NEW)
+### **Abstraction**  
+Service layer hides the internal logic from main class.
 
-Your project now works like a mini-wallet app.
+### **Inheritance**  
+(Not mandatory but used if extended classes are added in future like FixedExpense, VariableExpense)
 
-Start with initial balance (e.g., ₹40,000)
+### **Polymorphism**  
+Method overloading/overriding used in service classes.
 
-When you add an expense → balance reduces
-
-When you delete an expense → amount added back
-
-When you update an expense → balance auto-adjusts
-
-Always shows remaining balance
-
-This is the biggest NEW feature added to your project.
-
-🔐 2. Password Protection
-
-Before accessing the app, user must enter a valid password.
-
-Prevents unauthorized access.
-
-➕ 3. Add Expense
-
-User enters:
-
-Title
-
-Amount
-
-Date
-
-Category (optional)
-
-Validations include:
-
-No negative amount
-
-No empty fields
-
-No spending more than wallet balance
-
-Correct date format
-
-✏ 4. Update Expense
-
-Modify amount, description or date.
-
-Wallet automatically re-adjusts difference.
-
-❌ 5. Delete Expense
-
-Remove an expense by ID.
-
-Wallet refund system restores deleted amount.
-
-📄 6. View All Expenses
-
-Displays all saved expenses
-
-Clean tabular format
-
-Shows ID, Name, Amount, Date
-
-📆 7. Monthly Summary Report
-
-Get total expenses of any month
-
-Count of expenses
-
-Uses Polymorphism → Method Overloading
-
-getMonthlyTotal(int month);
-getMonthlyTotal(int month, int year);
+---
 
 🔥 OOPS Concepts Used (Updated for Wallet System)
 Encapsulation
 
-All fields in Expense are private
+- All fields in Expense are private
 
-Wallet balance is private inside service class
+- Wallet balance is private inside service class
 
 Abstraction
 
-ExpenseService hides business logic
+- ExpenseService hides business logic
 
-Main class doesn’t know how wallet adjusts
+- Main class doesn’t know how wallet adjusts
 
 Polymorphism
 
-Monthly summary uses method overloading
+- Monthly summary uses method overloading
 
-Same method name → different parameters
+- Same method name → different parameters
 
 Modularity
 
-Classes split clearly:
+- Classes split clearly:
 
-Expense → model
+   - Expense → model
 
-ExpenseService → logic
+   - ExpenseService → logic
 
-Main → UI/runner
+Main → UI/runne
 
-🧠 Step-by-Step Workflow (Updated With Wallet)
+---
 
-User enters password
+### Step-by-step Flow
+1. User enters password
 
-Wallet balance displayed
+2.Wallet balance displayed
 
-Menu opens:
+3.Menu opens:
 
-Add Expense
+-Add Expense
 
-Update Expense
+-Update Expense
 
-Delete Expense
+-Delete Expense
 
-View Expenses
+-View Expenses
 
-Monthly Summary
+-Monthly Summary
 
-Exit
+-Exit
 
-Adding expense → wallet decreases
+4.Adding expense → wallet decreases
 
-Deleting expense → wallet increases
+5.Deleting expense → wallet increases
 
-Updating expense → wallet recalculates difference
+6.Updating expense → wallet recalculates difference
 
-Data stays until program exit
+7.Data stays until program exit
 
-📈 Future Enhancements
+---
 
-CSV / JSON file storage
+## 📈 Future Enhancements
+- File-based storage (JSON / CSV)
+- Login & authentication
+- GUI / Web interface
+- Export monthly reports
+- Category analytics (Pie Chart)
 
-Login system with username & password
+---
 
-Mobile-style UI (JavaFX)
+## 🙋 About the Project
 
-Export monthly report
+This project helped me practice:
+- Real-time problem solving  
+- Clean coding principles  
+- OOPS concepts in real scenarios  
+- Using Java Collections effectively  
+- Building realistic, interview-ready applications  
 
-Category analytics (Pie chart)
+---
 
-Database support (MySQL / SQLite)
+## 🗺️ Roadmap (Upcoming Improvements)
 
-REST API version (Spring Boot)
+### 🔹 Phase 1 (In Progress)
+- Improve validations
+- More clean console UI
+- Code documentation with JavaDoc
 
-🙋 About the Project
+### 🔹 Phase 2
+- Add file-based storage (CSV/JSON)
+- Export monthly report to file
+- Add category statistics (min, max, average)
 
-This project helped me learn:
+### 🔹 Phase 3
+- Add login/authentication
+- Convert to GUI using Swing/JavaFX
+- Convert this into a full Spring Boot web application
 
-Real-world Java backend logic
+### 🔹 Phase 4
+- Graphical expense charts
+- Database support (MySQL / SQLite)
+- REST API version
 
-How digital wallet systems work
 
-OOPS implementation in actual projects
+## 🤝 Contribution
+Feel free to fork and improve the project!
 
-Collections & date handling
+---
 
-Clean coding & layered architecture
-
-Perfect for:
-
-Java students
-
-Entry-level developers
-
-Interview projects
-
-Portfolio GitHub repository
+## 📬 Contact
+If you like my project, let's connect on LinkedIn or GitHub.  
+Happy Coding! 🚀
