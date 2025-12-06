@@ -1,0 +1,47 @@
+package com.expense.service.WalletService;
+
+
+
+
+/*
+ WalletService: encapsulates wallet/balance operations.
+ Abstraction used: hides balance update/validation logic behind methods.
+ Encapsulation used: balance is private.
+*/
+public class WalletService {
+
+    private double balance;
+
+    public WalletService() {
+        this.balance = 0.0;
+    }
+
+    public WalletService(double initialBalance) {
+        this.balance = Math.max(0.0, initialBalance);
+    }
+
+    // Return current balance
+    public double getBalance() {
+        return balance;
+    }
+
+    // Deposit money into wallet (returns true if success)
+    public boolean deposit(double amount) {
+        if (amount <= 0) return false;
+        balance += amount;
+        return true;
+    }
+
+    // Deduct (spend) money if enough balance — returns true if deducted
+    public boolean deduct(double amount) {
+        if (amount <= 0) return false;
+        if (amount > balance) return false;
+        balance -= amount;
+        return true;
+    }
+
+    // Refund (adds back) - alias for deposit
+    public boolean refund(double amount) {
+        return deposit(amount);
+    }
+}
