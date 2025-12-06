@@ -144,31 +144,31 @@ Main → UI/runne
 ---
 
 ### Step-by-step Flow
-1. User enters password
+ 1. User enters password
 
-2.Wallet balance displayed
+ 2. Wallet balance displayed
 
-3.Menu opens:
+ 3. Menu opens:
 
--Add Expense
+   -Add Expense
 
--Update Expense
+   -Update Expense
 
--Delete Expense
+   -Delete Expense
 
--View Expenses
+   -View Expenses
 
--Monthly Summary
+   -Monthly Summary
 
--Exit
+   -Exit
 
-4.Adding expense → wallet decreases
+ 4. Adding expense → wallet decreases
 
-5.Deleting expense → wallet increases
+ 5. Deleting expense → wallet increases
 
-6.Updating expense → wallet recalculates difference
+ 6. Updating expense → wallet recalculates difference
 
-7.Data stays until program exit
+ 7. Data stays until program exit
 
 ---
 
