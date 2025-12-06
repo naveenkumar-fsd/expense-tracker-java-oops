@@ -32,6 +32,6 @@ public class Expense {
 
     @Override
     public String toString() {
-        return id + " | " + name + " | ₹" + amount + " | " + date + " | " + category;
+    	 return String.format("%d | %s | ₹%.2f | %s | %s", id, name, amount, date, category);
     }
 }
