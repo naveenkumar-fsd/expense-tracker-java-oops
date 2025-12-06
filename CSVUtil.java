@@ -21,6 +21,9 @@ public class CSVUtil {
 
             // Write each expense as a CSV row
             for (Expense e : expenses) {
+            	
+            	//naive CSV - for production escape commas & quotes
+            	
                 writer.write(
                 	e.getId() + ","+	
                     e.getName() + "," +
@@ -30,10 +33,18 @@ public class CSVUtil {
                 );
             }
 
-            System.out.println("CSV Export Successful");
+            System.out.println("CSV Export Successful ->" + fileName);
 
         } catch (IOException ex) {
             System.out.println("Error writing CSV: " + ex.getMessage());
         }
+    }
+    
+    private static String escape(String field) {
+        if (field == null) return "";
+        if (field.contains(",") || field.contains("\"")) {
+            return "\"" + field.replace("\"", "\"\"") + "\"";
+        }
+        return field;
     }
 }
